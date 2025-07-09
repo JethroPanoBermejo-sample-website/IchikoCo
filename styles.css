@@ -40,7 +40,7 @@ body {
 }
 
 .navbar-logo {
-    height: 90px;
+    height: 95px;
     width: auto;
     max-width: 200px;
     min-width: 120px;
@@ -273,9 +273,9 @@ body {
 .menu-subcategory {
     font-size: 1.3rem;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--secondary-color);
     margin-bottom: 1rem;
-    border-bottom: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
     padding-bottom: 0.5rem;
 }
 
