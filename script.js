@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize only essential functions
     initScrollToTop();
     initGallery();
+    initVideoModal();
 });
 
 // Scroll to Top Button
@@ -42,6 +43,37 @@ function initGallery() {
             modalImage.setAttribute('src', imgSrc);
             modalImage.setAttribute('alt', imgAlt);
             modal.show();
+        });
+    });
+}
+
+// Video Modal Functions
+function initVideoModal() {
+    const videoModal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    const modalTitle = document.getElementById('videoModalLabel');
+    
+    // Handle video modal show
+    videoModal.addEventListener('show.bs.modal', function(event) {
+        const button = event.relatedTarget;
+        const videoSrc = button.getAttribute('data-video');
+        const videoTitle = button.getAttribute('data-title');
+        
+        modalVideo.src = videoSrc;
+        modalTitle.textContent = videoTitle;
+    });
+    
+    // Handle video modal hide
+    videoModal.addEventListener('hidden.bs.modal', function() {
+        modalVideo.pause();
+        modalVideo.src = '';
+    });
+    
+    // Pause all thumbnail videos when modal opens
+    videoModal.addEventListener('show.bs.modal', function() {
+        const thumbnailVideos = document.querySelectorAll('.video-thumbnail video');
+        thumbnailVideos.forEach(video => {
+            video.pause();
         });
     });
 }
