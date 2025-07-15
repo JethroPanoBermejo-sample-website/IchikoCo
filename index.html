@@ -20,7 +20,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNavbar">
         <div class="container">
             <a class="navbar-brand" href="#home">
-                <img src="img/Ichikoco-logo.png" alt="Ichiko Co Logo" class="navbar-logo">
+                <img src="img/Ichikoco-logo.webp" alt="Ichiko Co Logo" class="navbar-logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -37,10 +37,13 @@
                         <a class="nav-link" href="#menu">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Gallery</a>
+                        <a class="nav-link" href="#community">Community</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#helping-paws">Helping Paws</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#visit">Visit Us</a>
                     </li>
                 </ul>
             </div>
@@ -49,13 +52,31 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
+        <video autoplay muted loop id="hero-video">
+            <source src="img/Ichikoco-homepage.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="container">
                 <div class="row justify-content-center text-center">
                     <div class="col-lg-8">
-                        <h1 class="hero-title">Welcome to Ichiko Co</h1>
-                        <p class="hero-subtitle">Premium Coffee Experience in Jaro, Iloilo</p>
+                        <h1 class="hero-title">Welcome to Ichiko, Co</h1>
+                        <p class="hero-subtitle">Here, we collaborate, create, and connect over coffee crafted with love</p>
+                        <div class="hero-info" style="color: rgba(255, 255, 255, 0.9); font-size: 1rem; margin-bottom: 2rem;">
+                            <div class="row justify-content-center text-center">
+                                <div class="col-lg-6 col-md-12 mb-2 mb-lg-0">
+                                    <p class="hero-location mb-0">
+                                        <i class="bi bi-geo-alt-fill me-2"></i>12 Libertad St, Jaro, Iloilo City, 5000 Iloilo
+                                    </p>
+                                </div>
+                                <div class="col-lg-6 col-md-12 mb-0">
+                                    <p class="hero-hours mb-0">
+                                        <i class="bi bi-clock-fill me-2"></i>Mon-Sun: 10:00 AM - 06:00 PM
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                         <a href="#menu" class="btn btn-primary btn-lg">View Our Menu</a>
                     </div>
                 </div>
@@ -70,12 +91,11 @@
                 <div class="col-lg-6">
                     <h2 class="section-title">Our Story</h2>
                     <p class="lead">We named our café "Ichiko Co." because it perfectly reflects who we are and what we're about. "Ichiko" is a Japanese word that blends "ichi," meaning first, with "ko," meaning child. It symbolizes our first big venture and the excitement of starting something new.</p>
-                    <p>Since both of us are firstborns, the name felt like a natural fit—representing a fresh beginning and something special in our lives.</p>
-                    <p>We also love the idea of creating a cozy, inviting space where people can come together, relax, and enjoy good coffee. "Ichiko" just felt like the ideal name to capture that warm, welcoming vibe we want to offer. 💚</p>
+                    <a href="about.html" class="btn btn-primary">View More</a>
                 </div>
                 <div class="col-lg-6">
                     <div class="about-image">
-                        <img src="img/Ichikoco-story.jpg" alt="Ichiko Co Story" class="img-fluid rounded shadow">
+                        <img src="img/Ichikoco-story.webp" alt="Ichiko Co Story" class="img-fluid rounded shadow">
                     </div>
                 </div>
             </div>
@@ -91,400 +111,116 @@
                     <p class="lead">Discover our carefully crafted selection of coffee, matcha, and delicious treats</p>
                 </div>
             </div>
-
-            <!-- Coffee Menu -->
-            <div class="row mb-5">
-                <div class="col-12">
-                    <h3 class="menu-category-title">Coffee Menu</h3>
-                    <div class="row">
-                        <div class="col-lg-6 mb-4">
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h5>Americano</h5>
-                                    <span class="menu-prices">₱100 / ₱110 / ₱100</span>
-                                </div>
-                                <small class="text-muted">Saks / Daks / Hot</small>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h5>Latte</h5>
-                                    <span class="menu-prices">₱110 / ₱130 / ₱120</span>
-                                </div>
-                                <small class="text-muted">Saks / Daks / Hot</small>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h5>Spanish Latte</h5>
-                                    <span class="menu-prices">₱120 / ₱140 / ₱130</span>
-                                </div>
-                                <small class="text-muted">Saks / Daks / Hot</small>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h5>Hazelnut Latte</h5>
-                                    <span class="menu-prices">₱130 / ₱160 / ₱140</span>
-                                </div>
-                                <small class="text-muted">Saks / Daks / Hot</small>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h5>Caramel Latte</h5>
-                                    <span class="menu-prices">₱130 / ₱160 / ₱140</span>
-                                </div>
-                                <small class="text-muted">Saks / Daks / Hot</small>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h5>Pumpkin Spice Latte</h5>
-                                    <span class="menu-prices">₱130 / ₱160 / ₱140</span>
-                                </div>
-                                <small class="text-muted">Saks / Daks / Hot</small>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h5>Mocha Latte</h5>
-                                    <span class="menu-prices">₱130 / ₱160 / ₱140</span>
-                                </div>
-                                <small class="text-muted">Saks / Daks / Hot</small>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h5>Chocnut Latte</h5>
-                                    <span class="menu-prices">₱130 / ₱160 / ₱140</span>
-                                </div>
-                                <small class="text-muted">Saks / Daks / Hot</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Matcha Menu -->
-            <div class="row mb-5">
-                <div class="col-12">
-                    <h3 class="menu-category-title">Matcha Menu</h3>
-                    <div class="row">
-                        <div class="col-lg-6 mb-4">
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h5>Matcha Green Tea</h5>
-                                    <span class="menu-prices">₱110 / ₱130 / ₱120</span>
-                                </div>
-                                <small class="text-muted">Saks / Daks / Hot</small>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h5>Matcha Latte</h5>
-                                    <span class="menu-prices">₱120 / ₱140 / ₱130</span>
-                                </div>
-                                <small class="text-muted">Saks / Daks / Hot</small>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h5>Matcha Choco</h5>
-                                    <span class="menu-prices">₱130 / ₱160</span>
-                                </div>
-                                <small class="text-muted">Saks / Daks</small>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h5>Matcha Strawberry</h5>
-                                    <span class="menu-prices">₱140 / ₱170</span>
-                                </div>
-                                <small class="text-muted">Saks / Daks</small>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h5>Dirty Matcha</h5>
-                                    <span class="menu-prices">₱150 / ₱170 / ₱160</span>
-                                </div>
-                                <small class="text-muted">Saks / Daks / Hot</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Non-Coffee Menu -->
-            <div class="row mb-5">
-                <div class="col-12">
-                    <h3 class="menu-category-title">Non-Coffee</h3>
-                    <div class="row">
-                        <div class="col-lg-6 mb-4">
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h5>Strawberry Milk</h5>
-                                    <span class="menu-prices">₱130 / ₱160 / ₱140</span>
-                                </div>
-                                <small class="text-muted">Saks / Daks / Hot</small>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h5>Chocolate Milk</h5>
-                                    <span class="menu-prices">₱120 / ₱150</span>
-                                </div>
-                                <small class="text-muted">Saks / Daks</small>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h5>Cucumber Lemonade</h5>
-                                    <span class="menu-prices">₱50</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="menu-item">
-                                <div class="menu-item-header">
-                                    <h5>Iced Tea</h5>
-                                    <span class="menu-prices">₱50</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Munchies Menu -->
-            <div class="row">
-                <div class="col-12">
-                    <h3 class="menu-category-title">Munchies</h3>
-                    <div class="row">
-                        <div class="col-lg-6 mb-4">
-                            <h5 class="menu-subcategory">Pastries</h5>
-                            <div class="menu-item mb-3">
-                                <div class="menu-item-header">
-                                    <h6>Sheesh Roll</h6>
-                                    <span class="menu-prices">₱35</span>
-                                </div>
-                            </div>
-                            <div class="menu-item mb-3">
-                                <div class="menu-item-header">
-                                    <h6>Matchalone</h6>
-                                    <span class="menu-prices">₱50</span>
-                                </div>
-                            </div>
-                            <div class="menu-item mb-3">
-                                <div class="menu-item-header">
-                                    <h6>Chocolone</h6>
-                                    <span class="menu-prices">₱50</span>
-                                </div>
-                            </div>
-                            <div class="menu-item mb-3">
-                                <div class="menu-item-header">
-                                    <h6>Korean Bun</h6>
-                                    <span class="menu-prices">₱60</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <h5 class="menu-subcategory">Sandwiches</h5>
-                            <div class="menu-item mb-3">
-                                <div class="menu-item-header">
-                                    <h6>Ham & Cheese</h6>
-                                    <span class="menu-prices">₱90</span>
-                                </div>
-                            </div>
-                            <div class="menu-item mb-3">
-                                <div class="menu-item-header">
-                                    <h6>Cheesy Corned Beef</h6>
-                                    <span class="menu-prices">₱90</span>
-                                </div>
-                            </div>
-                            <div class="menu-item mb-3">
-                                <div class="menu-item-header">
-                                    <h6>Grilled Cheese</h6>
-                                    <span class="menu-prices">₱100</span>
-                                </div>
-                            </div>
-                            <div class="menu-item mb-3">
-                                <div class="menu-item-header">
-                                    <h6>Pesto Grilled Cheese</h6>
-                                    <span class="menu-prices">₱120</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <h5 class="menu-subcategory">Pizza</h5>
-                            <div class="menu-item mb-3">
-                                <div class="menu-item-header">
-                                    <h6>Three Cheese</h6>
-                                    <span class="menu-prices">₱220</span>
-                                </div>
-                            </div>
-                            <div class="menu-item mb-3">
-                                <div class="menu-item-header">
-                                    <h6>Meaty Pepperoni</h6>
-                                    <span class="menu-prices">₱220</span>
-                                </div>
-                            </div>
-                            <div class="menu-item mb-3">
-                                <div class="menu-item-header">
-                                    <h6>Pepperoni</h6>
-                                    <span class="menu-prices">₱220</span>
-                                </div>
-                            </div>
-                        </div>
+            
+            <!-- Menu Image -->
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-12">
+                    <div class="text-center">
+                        <img src="img/Ichikoco-menu.webp" alt="Ichiko Co Menu" class="img-fluid rounded shadow-lg">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-5">
+    <!-- Community Section -->
+    <section id="community" class="py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/Ichikoco-boardbackgroud.webp'); background-size: cover; background-position: center; background-attachment: fixed; color: var(--secondary-color);">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="section-title">Gallery</h2>
-                    <p class="lead">Experience the ambiance of Ichiko Co</p>
+                    <h2 class="section-title" style="color: var(--secondary-color);">Our Community</h2>
+                    <style>
+                        #community .section-title::after {
+                            background: var(--secondary-color);
+                        }
+                    </style>
+                    <p class="lead" style="color: rgba(255, 255, 255, 0.9);">Discover the heart of Ichiko Co - where neighbors become friends and memories are made</p>
                 </div>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="gallery-item">
-                        <img src="img/Ichikoco-latte.jpg" alt="Ichikoco-latte" class="img-fluid">
-                        <div class="gallery-overlay">
-                            <i class="bi bi-zoom-in"></i>
-                        </div>
+            
+            <!-- Community content -->
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img src="img/Ichikoco-community.webp" alt="Ichiko Co Community" class="img-fluid rounded shadow">
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="gallery-item">
-                        <img src="img/Ichikoco-brownies.jpg" alt="Ichikoco-brownies" class="img-fluid">
-                        <div class="gallery-overlay">
-                            <i class="bi bi-zoom-in"></i>
-                        </div>
+                <div class="col-lg-6">
+                    <p class="lead" style="color: rgba(255, 255, 255, 0.9);">We believe that the best things happen when passionate people come together. At Ichiko Co, we're always looking for meaningful collaborations that benefit our community and create unique experiences for our customers.</p>
+                    <a href="community.html" class="btn btn-primary">View More</a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Helping Paws Section -->
+    <section id="helping-paws" class="py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/Ichikoco-boardbackgroud.webp'); background-size: cover; background-position: center; background-attachment: fixed; color: var(--secondary-color);">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title" style="color: var(--secondary-color);">Helping Paws</h2>
+                    <style>
+                        #helping-paws .section-title::after {
+                            background: var(--secondary-color);
+                        }
+                    </style>
+                    <p class="lead" style="color: rgba(255, 255, 255, 0.9);">Supporting our furry friends in the community</p>
+                </div>
+            </div>
+            
+            <!-- Logos Section -->
+            <div class="row justify-content-center align-items-center mb-5">
+                <div class="col-lg-3 col-md-4 col-6 text-center mb-4 mb-lg-0">
+                    <div class="logo-container logo-container-green">
+                        <img src="img/Ichikoco-logo.webp" alt="Ichiko Co Logo" class="helping-paws-logo">
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="gallery-item">
-                        <img src="img/Ichikoco-environment.jpg" alt="Ichikoco-environment" class="img-fluid">
-                        <div class="gallery-overlay">
-                            <i class="bi bi-zoom-in"></i>
-                        </div>
+                <div class="col-lg-1 col-md-1 col-12 text-center mb-4 mb-lg-0">
+                    <div class="collaboration-symbol">
+                        <i class="bi bi-heart-fill" style="font-size: 2rem; color: var(--secondary-color);"></i>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="gallery-item">
-                        <img src="img/Ichikoco-environment-cards.jpg" alt="Ichikoco-environment-cards" class="img-fluid">
-                        <div class="gallery-overlay">
-                            <i class="bi bi-zoom-in"></i>
-                        </div>
+                <div class="col-lg-3 col-md-4 col-6 text-center mb-4 mb-lg-0">
+                    <div class="logo-container">
+                        <img src="img/Ichikoco-ilonggopuspins.webp" alt="Ilonggo Puspins Logo" class="helping-paws-logo">
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="gallery-item">
-                        <img src="img/Ichikoco-front.jpg" alt="Ichikoco-front" class="img-fluid">
-                        <div class="gallery-overlay">
-                            <i class="bi bi-zoom-in"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="gallery-item">
-                        <img src="img/Ichikoco-meals.jpg" alt="Ichikoco-meals" class="img-fluid">
-                        <div class="gallery-overlay">
-                            <i class="bi bi-zoom-in"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="gallery-item">
-                        <img src="img/Ichikoco-location.jpg" alt="Ichikoco-location" class="img-fluid">
-                        <div class="gallery-overlay">
-                            <i class="bi bi-zoom-in"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="gallery-item">
-                        <img src="img/Ichikoco-story.jpg" alt="Ichikoco-story" class="img-fluid">
-                        <div class="gallery-overlay">
-                            <i class="bi bi-zoom-in"></i>
-                        </div>
-                    </div>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <p class="lead mb-4" style="color: rgba(255, 255, 255, 0.9);">Join us in making a difference for our four-legged friends in Iloilo</p>
+                    <a href="helpingpaws.html" class="btn btn-primary btn-lg">View More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
+    <!-- Visit Us Section -->
+    <section id="visit" class="py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/Ichikoco-boardbackgroud.webp'); background-size: cover; background-position: center; background-attachment: fixed; color: var(--secondary-color);">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="section-title">Contact Us</h2>
-                    <p class="lead">Visit us or get in touch</p>
+                    <h2 class="section-title" style="color: var(--secondary-color);">Visit Us</h2>
+                    <style>
+                        #visit .section-title::after {
+                            background: var(--secondary-color);
+                        }
+                    </style>
+                    <p class="lead" style="color: rgba(255, 255, 255, 0.9);">Visit us or get in touch</p>
                 </div>
             </div>
             <!-- Map Section - Centered and Larger -->
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-8 col-md-10">
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.5234567890123!2d122.5551404!3d10.7254446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aee528db09a8a7%3A0x704d6393dcd908cd!2sIchiko%20Co!5e0!3m2!1sen!2sph!4v1234567890123!5m2!1sen!2sph" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Contact Details Section - Below Map -->
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="contact-info-transparent">
-                        <h4 class="text-center mb-4">Visit Our Coffee Shop</h4>
-                        <div class="row">
-                            <div class="col-md-4 text-center mb-4">
-                                <div class="contact-item-center">
-                                    <i class="bi bi-geo-alt-fill"></i>
-                                    <div>
-                                        <strong>Location</strong>
-                                        <p>Jaro, Iloilo City</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 text-center mb-4">
-                                <div class="contact-item-center">
-                                    <i class="bi bi-telephone-fill"></i>
-                                    <div>
-                                        <strong>Phone</strong>
-                                        <p>09670336535</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 text-center mb-4">
-                                <div class="contact-item-center">
-                                    <i class="bi bi-clock-fill"></i>
-                                    <div>
-                                        <strong>Hours</strong>
-                                        <p>Mon-Sun: 7:00 AM - 10:00 PM</p>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="map-container position-relative">
+                        <img src="img/Ichikoco-Jaro-iloilo-location.webp" alt="Ichiko Co Location Map" class="img-fluid rounded shadow-lg">
+                        <div class="map-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                            <a href="https://www.google.com/maps/place/Ichiko+Co/@10.7247647,122.5560023,16z/data=!4m14!1m7!3m6!1s0x33aee528db09a8a7:0x704d6393dcd908cd!2sIchiko+Co!8m2!3d10.7254446!4d122.5551404!16s%2Fg%2F11k9qtxkkj!3m5!1s0x33aee528db09a8a7:0x704d6393dcd908cd!8m2!3d10.7254446!4d122.5551404!16s%2Fg%2F11k9qtxkkj?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-primary btn-lg">
+                                <i class="bi bi-geo-alt-fill me-2"></i>View Full Map
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -498,7 +234,7 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="footer-brand">
-                        <img src="img/Ichikoco-logo.png" alt="Ichiko Co Logo" class="footer-logo">
+                        <img src="img/Ichikoco-logo.webp" alt="Ichiko Co Logo" class="footer-logo">
                     </div>
                     <p class="footer-text">Premium Coffee Experience in Jaro, Iloilo</p>
                 </div>
@@ -508,16 +244,16 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#menu">Menu</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#community">Community</a></li>
+                        <li><a href="#helping-paws">Helping Paws</a></li>
+                        <li><a href="#visit">Visit Us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4 mb-4">
                     <h5 class="footer-heading">Follow Us</h5>
                     <div class="footer-social">
-                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                        <a href="https://web.facebook.com/ichikocoiloilo" target="_blank" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/ichiko_co/" target="_blank" class="social-link"><i class="bi bi-instagram"></i></a>
                     </div>
                     <div class="footer-contact-info mt-3">
                         <p><i class="bi bi-geo-alt-fill"></i> Jaro, Iloilo City</p>
