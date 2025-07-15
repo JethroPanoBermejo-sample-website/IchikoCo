@@ -95,16 +95,27 @@ body {
 /* Hero Section */
 .hero-section {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url('img/Ichikoco-location.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    margin-top: 2rem;
+}
+
+#hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%) scale(1.1);
+    z-index: -1;
+    object-fit: cover;
+    object-position: center center;
+    filter: brightness(0.7) contrast(1.1);
 }
 
 .hero-overlay {
@@ -113,7 +124,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(139, 195, 74, 0.1), rgba(104, 159, 56, 0.1));
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    z-index: 1;
 }
 
 .hero-content {
@@ -121,6 +133,10 @@ body {
     z-index: 2;
     text-align: center;
     color: var(--secondary-color);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-title {
@@ -129,6 +145,8 @@ body {
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     animation: fadeInUp 1s ease-out;
+    white-space: nowrap;
+    text-align: center;
 }
 
 .hero-subtitle {
@@ -152,10 +170,18 @@ body {
 }
 
 .btn-primary:hover {
-    background: transparent;
-    color: var(--secondary-color);
+    background-color: #1877f2 !important;
+    border-color: #1877f2 !important;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(24, 119, 242, 0.3);
+}
+
+.btn-light:hover {
+    background-color: #f8f9fa !important;
+    border-color: #f8f9fa !important;
+    color: #1877f2 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Section Styles */
@@ -183,7 +209,7 @@ body {
 /* About Section */
 #about {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('img/Ichikoco-background.jpg');
+                url('img/Ichikoco-boardbackgroud.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -231,7 +257,7 @@ body {
 /* Menu Section */
 #menu {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('img/Ichikoco-background.jpg');
+                url('img/Ichikoco-boardbackgroud.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -314,80 +340,10 @@ body {
     font-size: 1.1rem;
 }
 
-/* Gallery Section */
-#gallery {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('img/Ichikoco-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: var(--secondary-color);
-}
-
-#gallery .section-title {
-    color: var(--secondary-color);
-}
-
-#gallery .section-title::after {
-    background: var(--secondary-color);
-}
-
-#gallery .lead {
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    cursor: pointer;
-    box-shadow: var(--shadow-light);
-    transition: var(--transition);
-}
-
-.gallery-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-medium);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-.gallery-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(139, 195, 74, 0.9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: var(--transition);
-}
-
-.gallery-item:hover .gallery-overlay {
-    opacity: 1;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
-
-.gallery-overlay i {
-    font-size: 2rem;
-    color: var(--secondary-color);
-}
-
 /* Contact Section */
 #contact {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('img/Ichikoco-background.jpg');
+                url('img/Ichikoco-boardbackgroud.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -675,9 +631,24 @@ body {
     }
 }
 
+/* Tablet view - responsive hero video */
+@media (max-width: 991px) {
+    #hero-video {
+        top: 40%;
+        transform: translateX(-50%) translateY(-50%) scale(0.9);
+    }
+}
+
 @media (max-width: 768px) {
+    /* Mobile view - responsive hero video */
+    #hero-video {
+        top: 35%;
+        transform: translateX(-50%) translateY(-50%) scale(0.8);
+    }
+    
     .hero-title {
         font-size: 2.5rem;
+        white-space: normal;
     }
     
     .hero-subtitle {
@@ -701,109 +672,6 @@ body {
     }
 }
 
-@media (max-width: 576px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-    
-    .btn-primary {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
-    }
-    
-    .menu-item {
-        padding: 1rem;
-    }
-    
-    .menu-item-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .menu-prices {
-        margin-top: 0.5rem;
-    }
-}
-
-/* Loading Animation */
-.loading {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: var(--transition);
-}
-
-.loading.loaded {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Smooth Scrolling Enhancement */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-dark);
-}
-
-/* Scroll to Top Button */
-.scroll-top-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: var(--transition);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-    z-index: 1000;
-    box-shadow: var(--shadow-medium);
-}
-
-.scroll-top-btn.visible {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.scroll-top-btn:hover {
-    background: var(--primary-dark);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(139, 195, 74, 0.4);
-}
-
-.scroll-top-btn:active {
-    transform: translateY(-1px);
-}
-
 /* Mobile responsiveness for scroll button */
 @media (max-width: 768px) {
     .scroll-top-btn {
@@ -813,4 +681,208 @@ html {
         height: 45px;
         font-size: 1.1rem;
     }
+}
+
+/* Video Gallery Styles */
+.video-thumbnail {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.video-thumbnail:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.video-thumbnail video {
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.video-thumbnail:hover video {
+    transform: scale(1.05);
+}
+
+.video-overlay {
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 12px;
+}
+
+.video-thumbnail:hover .video-overlay {
+    opacity: 1;
+}
+
+.play-button {
+    transition: transform 0.3s ease;
+}
+
+.video-thumbnail:hover .play-button {
+    transform: scale(1.1);
+}
+
+/* Video Modal Styles */
+.modal-content {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#modalVideo {
+    border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .video-thumbnail {
+        margin-bottom: 1rem;
+    }
+    
+    .play-button {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    
+    .play-button i {
+        font-size: 20px !important;
+    }
+}
+
+/* Map Image Overlay Styles */
+.map-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.map-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 12px;
+}
+
+.map-container:hover .map-overlay {
+    opacity: 1;
+}
+
+.map-overlay .btn {
+    transform: translateY(10px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.map-container:hover .map-overlay .btn {
+    transform: translateY(0);
+}
+
+/* Responsive map styles */
+@media (max-width: 768px) {
+    .map-overlay .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Helping Paws Section Styles */
+.helping-paws-logo {
+    max-width: 120px;
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.helping-paws-logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-container {
+    padding: 1rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 140px;
+}
+
+.logo-container:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.collaboration-symbol {
+    padding: 1rem 0;
+}
+
+/* Responsive adjustments for helping paws */
+@media (max-width: 768px) {
+    .helping-paws-logo {
+        max-width: 100px;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .logo-container {
+        min-height: 120px;
+    }
+    
+    .collaboration-symbol i {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Green logo container for Ichiko Co logo */
+.logo-container-green {
+    background: var(--primary-color) !important;
+}
+
+.logo-container-green:hover {
+    background: var(--primary-dark) !important;
+    box-shadow: 0 8px 25px rgba(139, 195, 74, 0.3) !important;
+}
+
+/* Content image styles */
+.content-image {
+    transition: transform 0.3s ease;
+}
+
+.content-image:hover {
+    transform: translateY(-5px);
+}
+
+.content-image img {
+    transition: transform 0.3s ease;
+}
+
+.content-image:hover img {
+    transform: scale(1.02);
+}
+
+/* Facebook button hover effects */
+.btn-primary:hover {
+    background-color: #1877f2 !important;
+    border-color: #1877f2 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(24, 119, 242, 0.3);
+}
+
+.btn-light:hover {
+    background-color: #f8f9fa !important;
+    border-color: #f8f9fa !important;
+    color: #1877f2 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Facebook button transition */
+.btn-primary,
+.btn-light {
+    transition: all 0.3s ease;
 }
