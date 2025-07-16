@@ -757,6 +757,17 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 12px;
+    aspect-ratio: 16/9;
+    max-width: 100%;
+    height: auto;
+}
+
+.map-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 .map-overlay {
@@ -782,9 +793,19 @@ body {
 
 /* Responsive map styles */
 @media (max-width: 768px) {
+    .map-container {
+        aspect-ratio: 4/3;
+    }
+    
     .map-overlay .btn {
         font-size: 0.9rem;
         padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .map-container {
+        aspect-ratio: 1/1;
     }
 }
 
